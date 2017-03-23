@@ -24,13 +24,9 @@ module.exports = {
        return when.promise(function(resolve) {
           // Do whatever work is needed to validate the username/password
           // combination.
-          var server_url = process.env.SERVER_URL || 'http://remotemonitoring.herokuapp.com';
-          console.log(server_url);
-          var port = process.env.SERVER_PORT || 80;
-          console.log(port);
+          var server_url = 'http://remotemonitoring.herokuapp.com';
+          var port = 80;
           var login_path = "/api/api-token-auth/";//global.get('login_path');
-          var url = server_url + login_path;
-          console.log(url)
           var data = {
             "username": username,
             "password": password
