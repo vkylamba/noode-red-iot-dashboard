@@ -76,7 +76,7 @@ module.exports = {
     // By default, the Node-RED UI is available at http://localhost:1880/
     // The following property can be used to specifiy a different root path.
     // If set to false, this is disabled.
-    httpAdminRoot: '/admin',
+    //httpAdminRoot: '/admin',
 
     // Some nodes, such as HTTP In, can be used to listen for incoming http requests.
     // By default, these are served relative to '/'. The following property
@@ -91,7 +91,7 @@ module.exports = {
     // When httpAdminRoot is used to move the UI to a different root path, the
     // following property can be used to identify a directory of static content
     // that should be served at http://localhost:1880/.
-    // httpStatic: '/home/nol/node-red-static/',
+    //httpStatic: '/home/nol/node-red-static/',
 
     // The maximum size of HTTP request that will be accepted by the runtime api.
     // Default: 5mb
@@ -105,14 +105,14 @@ module.exports = {
     // -----------------
     // To password protect the Node-RED editor and admin API, the following
     // property can be used. See http://nodered.org/docs/security.html for details.
-    adminAuth: {
-       type: "credentials",
-       users: [{
-           username: "admin",
-           password: "$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN.",
-           permissions: "*"
-       }]
-    },
+    //adminAuth: {
+    //    type: "credentials",
+    //    users: [{
+    //        username: "admin",
+    //        password: "$2a$08$zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN.",
+    //        permissions: "*"
+    //    }]
+    //},
 
     // To password protect the node-defined HTTP endpoints (httpNodeRoot), or
     // the static content (httpStatic), the following properties can be used.
@@ -175,15 +175,6 @@ module.exports = {
     //    context.global.os
 
     functionGlobalContext: {
-        'server_url': 'http://localhost:8111',
-        'user_token': '',
-        'apis': {
-            'login_path': '/api/api-token-auth/',
-            'devices': '/api/devices',
-            'staticdata': '/api/devices/staticdata/',
-            'dynamicdata': '/api/devices/dynamicdata/',
-            'user': '/api/user/details'
-        } 
         // os:require('os'),
         // octalbonescript:require('octalbonescript'),
         // jfive:require("johnny-five"),
@@ -213,37 +204,5 @@ module.exports = {
             // Whether or not to include audit events in the log output
             audit: false
         }
-    },
-
-    // Editor
-    // editorTheme: {
-    //     page: {
-    //         title: "Node-RED-VIKI",
-    //         favicon: "/absolute/path/to/theme/icon",
-    //         css: "/absolute/path/to/custom/css/file"
-    //     },
-    //     header: {
-    //         title: "Node-RED-VIKI",
-    //         image: "/absolute/path/to/header/image", // or null to remove image
-    //         url: "http://nodered.org" // optional url to make the header text/image a link to this url
-    //     },
-    //     deployButton: {
-    //         type:"simple",
-    //         label:"Save",
-    //         icon: "/absolute/path/to/deploy/button/image" // or null to remove image
-    //     },
-    //     menu: { // Hide unwanted menu items by id. see editor/js/main.js:loadEditor for complete list
-    //         "menu-item-import-library": true,
-    //         "menu-item-export-library": true,
-    //         "menu-item-keyboard-shortcuts": false,
-    //         "menu-item-help": {
-    //             label: "Help",
-    //             url: "http://vikaslamba.com"
-    //         }
-    //     },
-    //     userMenu: true, // Hide the user-menu even if adminAuth is enabled
-    //     login: {
-    //         image: "/absolute/path/to/login/page/big/image" // a 256x256 image
-    //     }
-    // },
+    }
 }
