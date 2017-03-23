@@ -13,7 +13,7 @@
         "start": "node red.js",
         "test": "grunt",
         "build": "grunt build",
-        "postinstall": "grunt build"
+        "postinstall": "npm uninstall node-red-contrib-ui && npm i node-red-dashboard && grunt build"
     },
     "bin"          : {
         "node-red": "./red.js",
