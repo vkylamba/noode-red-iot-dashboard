@@ -1,6 +1,5 @@
 var when = require("when");
 var http = require('http');
-var env = require('node-env-file');
 
 module.exports = {
    type: "credentials",
