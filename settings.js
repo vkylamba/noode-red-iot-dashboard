@@ -51,7 +51,7 @@ module.exports = {
     //debugUseColors: true,
 
     // The file containing the flows. If not set, it defaults to flows_<hostname>.json
-    flowFile: './flows/demo.json',
+    flowFile: 'flows/demo.json',
 
     // To enabled pretty-printing of the flow within the flow file, set the following
     //  property to true:
@@ -67,7 +67,7 @@ module.exports = {
 
     // By default, all user data is stored in the Node-RED install directory. To
     // use a different location, the following property can be used
-    userDir: './user-dir',
+    userDir: 'user-dir',
 
     // Node-RED scans the `nodes` directory in the install directory to find nodes.
     // The following property can be used to specify an additional directory to scan.
@@ -113,7 +113,7 @@ module.exports = {
     //        permissions: "*"
     //    }]
     // },
-    adminAuth: require("./user-authentication"),
+    adminAuth: require("user-authentication"),
 
     // To password protect the node-defined HTTP endpoints (httpNodeRoot), or
     // the static content (httpStatic), the following properties can be used.
