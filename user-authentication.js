@@ -23,7 +23,7 @@ module.exports = {
        return when.promise(function(resolve) {
           // Do whatever work is needed to validate the username/password
           // combination.
-          var server_url = 'http://remotemonitoring.herokuapp.com';
+          var server_url = 'remotemonitoring.herokuapp.com';
           var port = 80;
           var login_path = "/api/api-token-auth/";//global.get('login_path');
           var data = {

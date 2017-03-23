@@ -176,7 +176,7 @@ module.exports = {
     //    context.global.os
 
     functionGlobalContext: {
-        'server_url': 'http://localhost:8111',
+        'server_url': 'remotemonitoring.herokuapp.com',
         'user_token': '',
         'apis': {
             'login_path': '/api/api-token-auth/',
