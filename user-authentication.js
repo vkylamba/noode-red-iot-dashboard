@@ -1,5 +1,6 @@
 var when = require("when");
 var http = require('http');
+var env = require('node-env-file');
 
 module.exports = {
    type: "credentials",
@@ -23,16 +24,20 @@ module.exports = {
        return when.promise(function(resolve) {
           // Do whatever work is needed to validate the username/password
           // combination.
-          var server_url = "localhost";//global.get('server_url');
+          var server_url = process.env.SERVER_URL || 'http://remotemonitoring.herokuapp.com';
+          console.log(server_url);
+          var port = process.env.SERVER_PORT || 80;
+          console.log(port);
           var login_path = "/api/api-token-auth/";//global.get('login_path');
           var url = server_url + login_path;
+          console.log(url)
           var data = {
             "username": username,
             "password": password
           };
           var options = {
             hostname: server_url,
-            port: 8111,
+            port: port,
             path: login_path,
             method: 'POST',
             headers: {
