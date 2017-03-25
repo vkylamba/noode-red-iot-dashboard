@@ -177,6 +177,7 @@ module.exports = {
 
     functionGlobalContext: {
         'server_url': 'remotemonitoring.herokuapp.com',
+        // 'server_url': 'localhost:8111',
         'user_token': '',
         'apis': {
             'login_path': '/api/api-token-auth/',
@@ -184,6 +185,30 @@ module.exports = {
             'staticdata': '/api/device/staticdata/',
             'dynamicdata': '/api/device/dynamicdata/',
             'user': '/api/user/details'
+        },
+        utils: {
+            methods: {
+                formatDatetime: function(date){
+                    var m = new Date(date);
+                    var month = (m.getMonth()+1);
+                    if(month < 10)
+                        month = "0"+month;
+                    var date = m.getDate();
+                    if(date < 10)
+                        date = "0"+date;
+                    var hours = m.getHours();
+                    if(hours < 10)
+                        hours = "0"+hours;
+                    var minutes = m.getMinutes();
+                    if(minutes < 10)
+                        minutes = "0"+minutes;
+                    var seconds = m.getSeconds();
+                    if(seconds < 10)
+                        seconds = "0"+seconds;
+                    var dateString = m.getFullYear() +"/"+ month +"/"+ date + " " + hours + ":" + minutes + ":" + seconds;
+                    return dateString;
+                }
+            }
         } 
         // os:require('os'),
         // octalbonescript:require('octalbonescript'),
