@@ -181,8 +181,8 @@ module.exports = {
         'apis': {
             'login_path': '/api/api-token-auth/',
             'devices': '/api/devices',
-            'staticdata': '/api/devices/staticdata/',
-            'dynamicdata': '/api/devices/dynamicdata/',
+            'staticdata': '/api/device/staticdata/',
+            'dynamicdata': '/api/device/dynamicdata/',
             'user': '/api/user/details'
         } 
         // os:require('os'),
