@@ -184,7 +184,8 @@ module.exports = {
             'devices': '/api/devices',
             'staticdata': '/api/device/staticdata/',
             'dynamicdata': '/api/device/dynamicdata/',
-            'user': '/api/user/details'
+            'user': '/api/user/details',
+            'events': '/api/events/past/'
         },
         utils: {
             methods: {
