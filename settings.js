@@ -206,7 +206,19 @@ module.exports = {
                     var seconds = m.getSeconds();
                     if(seconds < 10)
                         seconds = "0"+seconds;
-                    var dateString = m.getFullYear() +"/"+ month +"/"+ date + " " + hours + ":" + minutes + ":" + seconds;
+                    var dateString = date + "/"+ month +"/"+ m.getFullYear() + " " + hours + ":" + minutes + ":" + seconds;
+                    return dateString;
+                },
+                formatUTCDateFromTimestamp: function(date){
+                    var m = new Date(date);
+                    var month = (m.getUTCMonth()+1);
+                    if(month < 10)
+                        month = "0"+month;
+                    var date = m.getUTCDate();
+                    if(date < 10)
+                        date = "0"+date;
+
+                    var dateString = date +"/"+ month +"/"+ m.getUTCFullYear();
                     return dateString;
                 }
             }
